@@ -1,0 +1,16 @@
+/* Hide the authorization button */
+.authorization__btn {
+    display: none !important;
+    pointer-events: none !important;
+}
+.auth-wrapper {
+    display: none !important;
+}
+
+.visible-auth {
+    display: block !important;
+}
+
+.try-out__btn {
+    disabled: true !important;
+}
