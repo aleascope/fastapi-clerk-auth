@@ -10,9 +10,9 @@ class Settings(BaseSettings):
     
 class FileSettings(Settings):
     class Config:
-        env_file = "app/.env"
+        env_file = "utils/.env"
 
 if False:
-    config = FileSettings()  # Load variables from .env file
+    settings = FileSettings()  # Load variables from .env file
 else:
-    config = Settings()  # Use os env variables only
+    settings = Settings()  # Use os env variables only
