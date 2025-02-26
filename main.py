@@ -14,7 +14,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.gzip import GZipMiddleware
 
 # Imports from this repo
-from app.config import config
+from utils.config import settings
 from protected import protected
 
 
@@ -82,7 +82,7 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 @app.get("/", include_in_schema=False)
 def root():
     try:
-        app_tag = config.APP_TAG
+        app_tag = settings.APP_TAG
         return {'message': f'Hello from [{app_tag}]'}
     except:
         return {'message': 'Hello'}
@@ -122,8 +122,8 @@ async def custom_docs():
     ></script>
     <script src="static/custom.js"></script>
     """
-    custom_html = custom_html.replace('{{CLERK_PK}}', config.CLERK_PK)
-    custom_html = custom_html.replace('{{CLERK_DOMAIN}}', config.CLERK_DOMAIN)
+    custom_html = custom_html.replace('{{CLERK_PK}}', settings.CLERK_PK)
+    custom_html = custom_html.replace('{{CLERK_DOMAIN}}', settings.CLERK_DOMAIN)
     
     # Combine the default Swagger UI HTML with the custom JavaScript
     content=swagger_html_body + custom_html
