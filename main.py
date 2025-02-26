@@ -1,9 +1,6 @@
 # Imports from public packages
-from time import time
-from typing import Optional, List, Union, Tuple, Dict
 import logging
 import uvicorn
-from contextlib import asynccontextmanager
 import jwt
 from fastapi import FastAPI, Request, HTTPException, Response
 from starlette.middleware.cors import CORSMiddleware
@@ -17,18 +14,17 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.gzip import GZipMiddleware
 
 # Imports from this repo
-from workers.config import config
-from protected import protected, lifespan
+from app.config import config
+from protected import protected
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
 
 
 PORT = 8080
     
 
-app = FastAPI(lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
+app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
 # Allow all domains (for development purposes or testing)
 app.add_middleware(
@@ -80,8 +76,7 @@ async def add_exception_handling(request: Request, call_next):
         )
 
 
-if False:
-    app.add_middleware(GZipMiddleware, minimum_size=1000)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 
 @app.get("/", include_in_schema=False)
