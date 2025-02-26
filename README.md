@@ -5,7 +5,7 @@ This repo shows how to integrate **Clerk** authentication into a **FastAPI** app
 Routes that need the user to be authenticated are defined in a dedicated **protected.py** router while other routes are defined in the main app.
 
 This demo app also customizes the **Swagger UI** that comes with FastAPI by:
-- adding a login/logout button
+- adding the Clerk official login/logout button
 - activating/deactivating the routes test buttons based on login status
 
 The Swagger page will look like this:
