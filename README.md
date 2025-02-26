@@ -6,7 +6,7 @@ Routes that need the user to be authenticated are defined in a dedicated **prote
 
 This demo app also customizes the **Swagger UI** that comes with FastAPI by:
 - adding the Clerk official login/logout button
-- activating/deactivating the routes test buttons based on login status
+- activating/deactivating the routes *Try it on* buttons based on login status
 
 The Swagger page will look like this:
 | <img width="1320" alt="swagger_ui" src="https://github.com/user-attachments/assets/6605df1b-49c6-4351-902e-53c46693a12b"> |
