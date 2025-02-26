@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     APP_TAG: str = ENV.get('APP_TAG')
-    CLERK_PK: str = ENV.get('CLERK_PK') # Your Clerk Private Key
+    CLERK_PK: str = ENV.get('CLERK_PK') # Your Clerk Publishable Key
     CLERK_DOMAIN: str = ENV.get('CLERK_DOMAIN') # Your Clerk Domain e.g. xxx.clerk.accounts.dev
         
     
