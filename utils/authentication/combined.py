@@ -12,8 +12,8 @@ from fastapi_clerk_auth import (
 )
 
 # Imports from this repo
-from workers.authentication.gcp import gcp_auth
-from workers.authentication.clerk import clerk_auth_guard
+from utils.authentication.gcp import gcp_auth
+from utils.authentication.clerk import clerk_auth_guard
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
