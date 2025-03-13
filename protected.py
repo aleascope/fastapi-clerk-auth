@@ -3,7 +3,7 @@ import logging
 from fastapi import APIRouter, Depends
 
 # Imports from this repo
-from utils.auth import clerk_auth
+from utils.authentication.clerk import clerk_auth
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
