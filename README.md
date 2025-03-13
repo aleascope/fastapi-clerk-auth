@@ -1,6 +1,8 @@
-# FastAPI App using Clerk
+# FastAPI app using Clerk authentication
 
 This repo shows how to integrate **Clerk** authentication into a **FastAPI** app using the **fastapi_clerk_auth** package.
+
+**Remark**: This repo also covers **GCP OAuth** to authenticate traffic from **Google Cloud** services (eg a PubSub subscriptions invoking the app deployed on **Cloud Run**). It also covers the case where both authentication methods (Clerk, GCP) are combined.
 
 Routes that need the user to be authenticated are defined in a dedicated **protected.py** router while other routes are defined in the main app.
 
