@@ -13,7 +13,7 @@ import google.oauth2.id_token
 import google.auth.transport.requests
 
 # Imports from this repo
-from utils.config import config as settings
+from utils.config import settings
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
