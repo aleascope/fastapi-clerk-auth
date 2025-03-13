@@ -14,7 +14,7 @@ from fastapi_clerk_auth import (
 )
 
 # Imports from this repo
-from utils.config import config as settings
+from utils.config import settings
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
